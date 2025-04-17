@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserExampleController {
     @GetMapping("/{id}")
     @ResponseBody  // 인라인 형태로 직접 응답 본문 리턴
     public String get(
