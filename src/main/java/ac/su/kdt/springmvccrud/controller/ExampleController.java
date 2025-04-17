@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
 
-@Controller
+@Controller  // 페이지 응답을 기본으로 함
+// @RestController  // 본문 콘텐츠를 직접 응답함 (JSON)
 @RequestMapping("/")
 public class ExampleController {
     @GetMapping("/example1")
