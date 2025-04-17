@@ -48,10 +48,7 @@ public class ExampleController {
     @ResponseBody
     public String reqParam(
         @RequestParam(value = "par1", defaultValue = "par1 missing") String param1,
-        @RequestParam(
-            value = "par2"
-            , defaultValue = "null"
-        ) String param2,
+        @RequestParam(value = "par2", defaultValue = "null") String param2,
         @RequestParam(value = "par3", defaultValue = "0") String param3
     ) {
         // Validation patterns
@@ -70,4 +67,12 @@ public class ExampleController {
         return "param1: " + param1 + " param2: " + param2 + " param3: " + param3;
     }
 
+    @PostMapping("/example5-reqbody")
+    @ResponseBody
+    public String example5(
+        @RequestParam String param1,
+        @RequestBody String payload
+    ) {
+        return "Received body data: " + payload + " param1: " + param1;
+    }
 }
